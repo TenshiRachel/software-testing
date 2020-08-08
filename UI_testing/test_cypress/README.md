@@ -22,3 +22,5 @@ test_cypress$ npx cypress open
 ```
 
 You should now see the Cypress runner open. 
+
+Now, click test_sonarqube.js to start the test.
