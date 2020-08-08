@@ -1,7 +1,7 @@
 GLOBAL_COUNTER = 0
 
 USER_CREDENTIALS = [
-    ('110385fcd064b3050e7e9ce31f63dc510af24e2c', '')
+    ('', '')
 ]
 
 PROJECT = 'software-test'
