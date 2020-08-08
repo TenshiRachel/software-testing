@@ -9,23 +9,23 @@ class BaseElement {
     }
 
     async goto(url) {
-        await this._page.goto(url)
+        return await this._page.goto(url)
     }
 
     async click() {
-        await this.find_element().click()
+        return await (await this.find_element()).click()
     }
 
     async screenshot(fileName) {
         await this.find_element()
-        await this._page.screenshot({path: `/screenshots/${fileName}.png`})
+        await this._page.screenshot({path: `./screenshots/${fileName}.png`})
     }
 
     async find_element() {
         let _context = this._page
         if (this._parent.constructor.name == 'Element') _context = await this._parent.find_element()
         if (this._xpath !== '') {
-            await this._page.waitForXpath(this._xpath)
+            await this._page.waitForXPath(this._xpath)
             return await (await _context.$x(this._xpath))[0]
         }
         else {

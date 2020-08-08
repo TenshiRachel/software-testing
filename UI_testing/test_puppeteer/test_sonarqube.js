@@ -2,6 +2,8 @@ const constants = require('./constants')
 const sonarqubePage = require('./page_objects/sonarqube_page')
 const puppeteer = require('puppeteer')
 
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000
+
 describe('sonarqube test', () => {
     let browser = null
     let sonarqube = null
@@ -10,8 +12,15 @@ describe('sonarqube test', () => {
             headless: false,
             defaultViewport: null
         })
-        sonarqube = new sonarqubePage(await browser.pages[0])
+        sonarqube = new sonarqubePage(await browser.newPage())
         await sonarqube.goto(constants.BASEURL)
+    })
+
+    it('screenshot project', async () => {
+        // sonarqube = new sonarqubePage((await browser.pages)[1])
+        await sonarqube.clickProjectsTab()
+        await sonarqube.clickProject('software-test')
+        await sonarqube.screenshotProject('software-test')
     })
 
     afterEach(async () => {

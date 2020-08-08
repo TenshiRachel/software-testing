@@ -13,7 +13,7 @@ class SonarqubePage extends BaseElement {
     }
 
     async clickProject(project) {
-        this.projectLink = new BaseElement(parent, '', `//h2[@class="project-card-name"]/a[text()="${project}"]`)
+        this.projectLink = new BaseElement(this._parent, '', `//h2[@class="project-card-name"]/a[text()="${project}"]`)
         this.projectLink.click()
     }
 
