@@ -16,6 +16,11 @@ class BaseElement {
         await this.find_element().click()
     }
 
+    async screenshot(fileName) {
+        await this.find_element()
+        await this._page.screenshot({path: `/screenshots/${fileName}.png`})
+    }
+
     async find_element() {
         let _context = this._page
         if (this._parent.constructor.name == 'Element') _context = await this._parent.find_element()
