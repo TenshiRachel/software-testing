@@ -19,8 +19,8 @@ describe('sonarqube test', () => {
     it('screenshot project', async () => {
         // sonarqube = new sonarqubePage((await browser.pages)[1])
         await sonarqube.clickProjectsTab()
-        await sonarqube.clickProject('software-test')
-        await sonarqube.screenshotProject('software-test')
+        await sonarqube.clickProject(constants.PROJECT_NAME)
+        await sonarqube.screenshotProject(constants.PROJECT_NAME)
     })
 
     afterEach(async () => {
