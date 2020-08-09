@@ -12,9 +12,9 @@ class SonarClient(CommonClient):
                  polling_max_attempts=400,
                  logging_level=logging.WARNING):
         """
-        Creates a new instance of a client object to access the SAP Document Classification service
+        Creates a new instance of a client object to access Sonarqube
         """
-        logger = logging.getLogger('DCApiClient')
+        logger = logging.getLogger('SonarqubeApiClient')
         logger.setLevel(logging_level)
         CommonClient.__init__(self,
                               base_url=base_url,
@@ -24,3 +24,9 @@ class SonarClient(CommonClient):
                               polling_max_attempts=polling_max_attempts,
                               logging_level=logging_level)
         self.logger = logger
+
+    def get_project_coverage(project):
+        res = self.session.get(self.base_url + 
+        'api/measures/search_history?component={project}&metrics=coverage'.format(project=project),
+        verify=False, auth=self.auth)
+        return res
