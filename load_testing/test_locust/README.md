@@ -22,6 +22,8 @@ USER_CREDENTIALS = [
 ]
 ```
 
+Also make sure you change the project name in config.py to your own Sonarqube project name.
+
 To start the test, execute the command below.
 
 ```shell
