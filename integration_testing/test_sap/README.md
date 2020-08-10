@@ -27,6 +27,8 @@ def __init__(self,
                 logging_level=logging.WARNING):
 ```
 
+Also make sure that you change the project name in constants.py to your own Sonarqube project name.
+
 ```shell
 test_sap$ python -m pytest test_sonarqube.py
 ```

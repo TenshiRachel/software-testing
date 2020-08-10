@@ -18,6 +18,9 @@ test_puppeteer$ npx jasmine init
 
 ## Run test
 
+Before running, make sure you have changed the project name in constants.js to
+your own Sonarqube project name.
+
 ```shell
 test_puppeteer$ npm test test_sonarqube.js
 ```

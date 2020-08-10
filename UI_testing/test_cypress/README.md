@@ -16,6 +16,9 @@ test_puppeteer$ npm install
 
 ## Run test
 
+Before runnning, make sure you have changed the project name in constants.js to your own Sonarqube 
+project name.
+
 ```shell
 # open cypress
 test_cypress$ npx cypress open
