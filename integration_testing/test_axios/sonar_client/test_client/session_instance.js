@@ -5,6 +5,10 @@ let createSession = function createSession(baseUrl, auth) {
         baseUrl: baseUrl,
         headers: {
             Authorization: `Bearer ${auth}`
+        },
+        proxy: {
+            host: '127.0.0.1',
+            port: 9000
         }
     })
 }
