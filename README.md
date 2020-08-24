@@ -19,13 +19,30 @@ software_testing$ docker run -d --name sonarqube -p 9000:9000 sonarqube
 
 Sonarqube should now be running on [this link](http://localhost:9000).
 
-Make sure this is running when running any of the tests.
+Make sure this is running and that you have scanned this project before running any of the tests.
 
 ### Scanning this project
+
+Refer to [this link](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/) to scan the project.
+
+**Running from the zip file**
+
+Download sonar scanner for [Windows](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-windows.zip), [Linux](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip) or [Mac](https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-macosx.zip).
+
+Extract the files and add the bin directory to your path.
+
+```shell
+# Windows
+~$ sonar-scanner.bat
+# Mac/Linux
+~$ sonar-runner
+```
+
+**Running from Docker**
 
 ```shell
 # pull sonar scanner from DockerHub
 software-testing$ docker pull sonarsource/sonar-scanner-cli
 # make sure you are in software-testing directory
-software-testing$ docker run --rm -e SONAR_HOST_URL=http://host.docker.internal:9000 -it -v "$(cd)/user/src" sonarsource/sonar-scanner-cli
+software-testing$ docker run --rm -e SONAR_HOST_URL=http://host.docker.internal:9000 -it -v "/$(cd):/user/src" sonarsource/sonar-scanner-cli
 ```
