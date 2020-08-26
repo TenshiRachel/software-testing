@@ -1,0 +1,13 @@
+config:
+    target: 'http://localhost:9000'
+    phases:
+      - duration: 60
+        arrivalRate: 20
+    defaults:
+      headers:
+        Authorization: ''
+  scenarios:
+    - flow:
+      - get:
+          url: "/api/project_branches/list?project=software-test"
+  

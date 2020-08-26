@@ -1,4 +1,5 @@
 node_modules/
 spec/
 .scannerwork/
+screenshots/
 package-lock.json
