@@ -1,0 +1,15 @@
+{
+  "name": "test_super_agent",
+  "version": "1.0.0",
+  "description": "This is an example of integration testing with [Super Agent](https://github.com/visionmedia/superagent) with [Jasmine](https://github.com/jasmine/jasmine) framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^3.6.1",
+    "superagent": "^6.0.0"
+  }
+}
