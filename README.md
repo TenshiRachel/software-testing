@@ -7,7 +7,7 @@ These tests will be carried out in [Sonarqube](https://www.sonarqube.org/).
 
 ## Setup
 
-## Prerequisites
+### Prerequisites
 
 **WSL2 (Windows Subsystem for Linux)**
 
@@ -18,6 +18,18 @@ These tests will be carried out in [Sonarqube](https://www.sonarqube.org/).
 **Ubuntu for Windows**
 
 If using windows, please download Ubuntu for Linux from the Microsoft store.
+
+**NVM (Node version manager)**
+
+```shell
+# make sure Ubuntu for windows and WSL is installed before executing commands
+# if running on windows, run below command
+wsl -d Ubuntu
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+# verify installation
+command -v nvm
+```
 
 ### Run Sonarqube image
 

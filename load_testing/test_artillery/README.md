@@ -14,15 +14,9 @@ cd test_artillery
 npm install
 ```
 
-Next, install nvm (Node version manager) and use node version 12 or above.
+Next, use node version 12 or above with node version manager.
 
 ```shell
-# if running on windows, run below command
-wsl -d Ubuntu
-# install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-# verify installation
-command -v nvm
 # install node version
 nvm install 12.18.3
 # use node version
