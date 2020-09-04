@@ -6,8 +6,8 @@ config:
     defaults:
       headers:
         Authorization: ''
-  scenarios:
-    - flow:
-      - get:
-          url: "/api/project_branches/list?project=software-test"
+scenarios:
+  - flow:
+    - get:
+        url: "/api/project_branches/list?project=software-test"
   

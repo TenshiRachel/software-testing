@@ -7,6 +7,18 @@ These tests will be carried out in [Sonarqube](https://www.sonarqube.org/).
 
 ## Setup
 
+## Prerequisites
+
+**WSL2 (Windows Subsystem for Linux)**
+
+**Docker**
+
+[Install docker](https://docs.docker.com/docker-for-windows/install/)
+
+**Ubuntu for Windows**
+
+If using windows, please download Ubuntu for Linux from the Microsoft store.
+
 ### Run Sonarqube image
 
 ```shell
