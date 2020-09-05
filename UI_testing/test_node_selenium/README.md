@@ -1,8 +1,10 @@
 ## Selenium WebDriver (JavaScript)
 
-This is an example of UI testing with [Selenium WebDriver](https://github.com/SeleniumHQ/selenium) in JavaScript.
+This is an example of UI testing with [Selenium WebDriver](https://github.com/SeleniumHQ/selenium) in JavaScript with [Jasmine framework](https://github.com/jasmine/jasmine).
 
 [Selenium WebDriver docs](https://www.selenium.dev/selenium/docs/api/javascript/index.html)
+
+[Jasmine docs](https://jasmine.github.io/)
 
 ### Setup
 

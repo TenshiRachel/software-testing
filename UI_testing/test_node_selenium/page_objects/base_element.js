@@ -13,6 +13,10 @@ class BaseElement {
         await this.driver.get(url)
     }
 
+    async close() {
+        await this.driver.close()
+    }
+
     async screenshot() {
         await this.findElement()
         await this.findElement().takeScreenshot()
