@@ -1,4 +1,4 @@
-from .page_objects.sonarqube_page import SonarqubePage
+from page_objects.sonarqube_page import SonarqubePage
 import constants
 import pytest
 

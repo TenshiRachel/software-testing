@@ -1,7 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 
 class BaseElement:
-    def __init__(self, driver, _css, _xpath):
+    def __init__(self, driver, _css='', _xpath=''):
         self.driver = driver
         self.css = _css
         self.xpath = _xpath

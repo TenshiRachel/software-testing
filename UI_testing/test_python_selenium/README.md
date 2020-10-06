@@ -20,5 +20,5 @@ test_python_selenium$ pip install -r requirements.txt
 ### Run test
 
 ```shell
-test_python_selenium$ pytest test_sonar.py
+test_python_selenium$ python -m pytest test_sonar.py
 ```

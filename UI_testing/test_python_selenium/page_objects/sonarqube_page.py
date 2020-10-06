@@ -2,8 +2,8 @@ from .base_element import BaseElement
 import constants
 
 class SonarqubePage(BaseElement):
-    def __init__(self, driver, _css, _xpath):
-        super.__init__(driver, _css, _xpath)
+    def __init__(self, driver, _css='', _xpath=''):
+        super().__init__(driver, _css, _xpath)
         self.portfolio_tab = BaseElement(self.driver, '', constants.PROJECTS_TAB_XPATH)
         self.overview_page = BaseElement(self.driver, constants.PROJECT_OVERVIEW_SELECTOR)
 
