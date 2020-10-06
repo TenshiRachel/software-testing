@@ -1,3 +1,5 @@
+const webDriver = require('selenium-webdriver')
+
 class BaseElement {
     constructor(driver, _css, _xpath='') {
         this.driver = driver
@@ -6,28 +8,23 @@ class BaseElement {
     }
 
     async click() {
-        this.findElement().click()
+        await (await this.findElement()).click()
     }
 
     async goto(url) {
         await this.driver.get(url)
     }
 
-    async close() {
-        await this.driver.close()
-    }
-
     async screenshot() {
-        await this.findElement()
-        await this.findElement().takeScreenshot()
+        await (await this.findElement()).takeScreenshot()
     }
 
     async findElement() {
         if (this._xpath == '') {
-            return await this.driver.findElement(By.css(this._css))
+            return await this.driver.wait(webDriver.until.elementLocated(webDriver.By.css(this._css)))
         }
         else {
-            return await this.driver.findElement(By.xpath(this._xpath))
+            return await this.driver.wait(webDriver.until.elementLocated(webDriver.By.xpath(this._xpath)))
         }
     }
 }

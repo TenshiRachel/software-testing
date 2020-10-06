@@ -8,6 +8,8 @@ This is an example of UI testing with [Selenium WebDriver](https://github.com/Se
 
 ### Setup
 
+Make sure you have installed the required driver for the associated browser and browser vesrion from [here](https://www.selenium.dev/selenium/docs/api/javascript/index.html) and place the executable on your system path.
+
 ```shell
 cd test_node_selenium
 # install required packages
