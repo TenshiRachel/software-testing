@@ -1,9 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
 
 class BaseElement:
-    def __init__(self, driver, browser, _css, _xpath):
+    def __init__(self, driver, _css, _xpath):
         self.driver = driver
-        self.browser = browser
         self.css = _css
         self.xpath = _xpath
 
@@ -11,7 +10,7 @@ class BaseElement:
         self.find_element().click()
 
     def goto(self, url):
-        self.browser.get(url)
+        self.driver.get(url)
 
     def screenshot(self, img_name):
         self.find_element()
