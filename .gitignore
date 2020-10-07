@@ -2,4 +2,5 @@ node_modules/
 spec/
 .scannerwork/
 screenshots/
+__pycache__/
 package-lock.json
