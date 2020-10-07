@@ -18,6 +18,6 @@ class BaseElement:
 
     def find_element(self):
         if self.xpath == '':
-            return WebDriverWait(self.driver).until(lambda x: x.find_element_by_css_selector(self.css))
+            return WebDriverWait(self.driver, 1000).until(lambda x: x.find_element_by_css_selector(self.css))
         else:
-            return WebDriverWait(self.driver).until(lambda x: x.find_element_by_css_selector(self.xpath))
+            return WebDriverWait(self.driver, 1000).until(lambda x: x.find_element_by_xpath(self.xpath))

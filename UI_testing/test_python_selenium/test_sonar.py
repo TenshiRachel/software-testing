@@ -10,6 +10,6 @@ def test_sonar(chrome_web_driver):
 
     sonarqube.click_portfolio_tab()
     sonarqube.click_project(constants.PROJECT_NAME)
-    sonarqube.screenshot_project(constants.PROJECT_NAME)
+    sonarqube.screenshot_project('{}.png'.format(constants.PROJECT_NAME))
 
     browser.quit()
