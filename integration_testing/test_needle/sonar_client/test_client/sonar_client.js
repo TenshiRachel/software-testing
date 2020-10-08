@@ -12,8 +12,8 @@ class SonarClient {
         const params = {
             project: project
         }
-        
-        return (await needle.request('get', url, params)).body
+
+        return await needle.request('get', url, params)
     }
 
     async getBranchCoverage(project, branch, analysisDate) {
@@ -26,7 +26,7 @@ class SonarClient {
             metrics: 'coverage'
         }
 
-        return (await needle.request('get', url, params)).body
+        return await needle.request('get', url, params)
     }
 }
 
