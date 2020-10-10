@@ -2,9 +2,10 @@ const SonarClient = require('./test_client/sonar_client')
 const constants = require('./constants')
 
 describe('sonarqube test', () => {
-    it('get branch coverage', async () => {
+    it('get branch coverage', () => {
         const client = new SonarClient()
-        let res = await client.getProjectBranches('software-test')
+        let res = client.getProjectBranches('software-test')
+        console.log(res)
         expect(res.statusCode).toBe(200)
         expect(res.body).toBeDefined()
 
@@ -12,7 +13,7 @@ describe('sonarqube test', () => {
         const branchName = masterBranch.name
         const analysisDate = masterBranch.analysisDate
 
-        res = await client.getBranchCoverage('software-test')
+        res = client.getBranchCoverage('software-test', branchName, analysisDate)
         expect(res.statusCode).toBe(200)
         expect(res.body).toBeDefined()
     })

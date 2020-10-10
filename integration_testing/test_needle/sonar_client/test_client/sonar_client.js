@@ -7,17 +7,29 @@ class SonarClient {
         this.auth = auth
     }
 
-    async getProjectBranches(project) {
+    getProjectBranches(project) {
         const url = this.baseUrl + constants.PROJECT_BRANCHES_ENDPOINT
+        const options = {
+            json: true,
+            headers: {
+                'Authorization': 'Bearer ' + this.auth
+            }
+        }
         const params = {
             project: project
         }
 
-        return await needle.request('get', url, params)
+        return needle.request('get', url, params, options)
     }
 
-    async getBranchCoverage(project, branch, analysisDate) {
+    getBranchCoverage(project, branch, analysisDate) {
         const url = this.baseUrl + constants.BRANCH_COVERAGE_ENDPOINT
+        const options = {
+            json: true,
+            headers: {
+                'Authorization': 'Bearer ' + this.auth
+            }
+        }
         const params = {
             component: project,
             branch: branch,
@@ -26,7 +38,7 @@ class SonarClient {
             metrics: 'coverage'
         }
 
-        return await needle.request('get', url, params)
+        return needle.request('get', url, params, options)
     }
 }
 
