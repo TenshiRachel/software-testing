@@ -17,5 +17,5 @@ test_needle$ npx jasmine init
 ### Run test
 
 ```shell
-test_needle$ npm test test_sonar.js
+test_needle$ npm test sonar_client/test_sonar.js
 ```
